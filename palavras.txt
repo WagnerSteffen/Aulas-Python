@@ -1,0 +1,9 @@
+abelha
+vassoura
+mercado
+cachorro
+passaro
+violao
+apartamento
+armario
+televisao 
