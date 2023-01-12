@@ -22,6 +22,7 @@ class person(object):
         self.weight = weight
         self.hight = hight
         print(f"{self.name} was successfully created")
+
         
     def older(self, time:int) -> None:
         """
