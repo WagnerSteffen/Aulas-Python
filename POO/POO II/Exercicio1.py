@@ -18,80 +18,44 @@ O valor do centro do objeto deve ser mostrado na tela
 Crie um menu para alterar os valores do retângulo e imprimir o centro deste
 retângulo.
 """
-class retangle(object):
-    def __init__(self, h:int, l:int, vertex) -> None:
-        """
-        Create a retangle with hight 'h' and side 'l'
-
-        Args:
-            h (int): the hight of the retangle
-            l (int): the side of the retangle
-            vertex (object): the starting point of the retangle
-        """
-        self.hight = h
-        self.side = l
-        print("Retangle created with success!")
-        
-    def plot(self) -> None:
-        self.vertex.posicion()
-        print(f"""
-The posicion of the retangle is:
-x, y: {self.vertex.x},{self.vertex.y}
-x',y: {self.vertex.x + self.side},{self.vertex.y}
-x,y': {self.vertex.x},{self.vertex.y + self.hight}
-x',y': {self.vertex.x + self.side}, {self.vertex.y + self.hight}
-""")
-        
-    def center(self) -> None:
-        x_center = self.vertex.y + self.hight
-        y_center = self.vertex.x + self.side
-        print(f'The center of the retangle is x: {x_center} and y:{y_center}')
-        
-class dot(object):
-    def __init__(self, x = 0, y = 0) -> None:
-        """
-        Create a dot in cartesian space
-
-        Args:
-            x (int): where in axis x
-            y (int): where in axis y
-        """
+class Ponto:
+    def __init__(self, x=0, y=0) -> None:
         self.x = x
         self.y = y
-        print("The dot was selected!")
-    
-    def posicion(self) -> None:
-        print(f"The posicion x,y of the vertex is: {self.x},{self.y}")
-    
+    def imprime(self):
+        print(f'O ponto é x:{self.x}, y:{self.y}')
+
+class Retangulo:
+    def __init__(self, b = 0, h = 0, vertice = Ponto()) -> None:
+        self.b = b 
+        self.h = h
+        self.vertice = vertice
+    def centro(self):
+        x = self.vertice.x + self.b/2
+        y = self.vertice.y + self.h/2
+        return Ponto(x,y)
 def main():
-    print("Choose your option: ")
-    op = 0
-    while op != 5:
-        op = int(input("1 - Create/change a retangle\n2 - Create/change a vertex\n3 - Print the center of the retangle\n4 - Print all information\n5 - Exit\nSelect: "))
-        if op == 1:
-            h = int(input("What is the hight of the retangle? "))
-            l = int(input("What is the side of the retangle? "))
-            create_vertex = bool(input("Do you wish to create the vertex now? 1 - yes | 0 - No\n:"))
-            
-            if create_vertex:
-                x = int(input("Where in axis x? "))
-                y = int(input("Where in axis y? "))
-                vertex = dot(x,y)
-            else:
-                vertex = dot()
-
-            rtg = retangle(h,l,vertex)    
-        elif op == 2:
-            x = int(input("Where in axis x? "))
-            y = int(input("Where in axis y? "))
-            vertex = dot(x, y)
-        elif op == 3:
-            rtg.center()
-        elif op == 4:
-            rtg.plot()
-        elif op == 5:
-            exit()
+    ret = Retangulo()
+    while True:
+        comando = menu()
+        if comando.startswith('m'):
+            ret.h = float(input("Digite a altura(h) do retangulo: "))
+            ret.b = float(input("Digite a base(b) do retangulo: "))
+            ret.vertice.x = float(input("Digite o ponto em X do vertice: "))
+            ret.vertice.y = float(input("Digite o ponto em Y do vertice: "))
+        elif comando.startswith('i'):
+            ret.centro().imprime()
         else:
-            op = int(input("Select one of the options above: "))
-
+            break
+        
+def menu():
+    while True:
+        operacao = str(input("Deseja MUDAR(m), IMPRIMIR(i) ou FECHAR(f)?\n:"))
+        operacao.lower()
+        if not operacao.isalpha():
+            print('Digite apenas letras')
+        elif operacao.startswith(('i','m','f')):
+            return operacao
+        else:
+            print('Problemas em interpretar a entrada!')
 main()
