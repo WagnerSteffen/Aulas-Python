@@ -18,6 +18,7 @@ O valor do centro do objeto deve ser mostrado na tela
 Crie um menu para alterar os valores do retângulo e imprimir o centro deste
 retângulo.
 """
+
 class Ponto:
     def __init__(self, x=0, y=0) -> None:
         self.x = x
@@ -34,6 +35,7 @@ class Retangulo:
         x = self.vertice.x + self.b/2
         y = self.vertice.y + self.h/2
         return Ponto(x,y)
+
 def main():
     ret = Retangulo()
     while True:
