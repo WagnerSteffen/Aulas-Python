@@ -7,8 +7,7 @@ O usuário deverá digitar sim ou não. Depois de mostrados todos os cartões
 o programa deverá mostrar o número que o usuário pensou.
 
 Use o cabeçário da classe jogo para implementar os métodos necessários para rodar o jogo.
-Escreve uma excessão SoSimOuNao para verificar a entrada do usuário (coloque-a dentro
-de um bloco try).
+Escreve uma excessão SoSimOuNao para verificar a entrada do usuário 
 
 Um mágico nunca revela seus segredos, por isso veja o método adivinha número na classe jogo
 para ver se você consegue descobrir como a adivinhação é feita!
