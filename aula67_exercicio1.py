@@ -7,11 +7,17 @@ O usuário deverá digitar sim ou não. Depois de mostrados todos os cartões
 o programa deverá mostrar o número que o usuário pensou.
 
 Use o cabeçário da classe jogo para implementar os métodos necessários para rodar o jogo.
-Escreve uma excessão SoSimOuNao para verificar a entrada do usuário 
+Escreve uma excessão SoSimOuNao para verificar a entrada do usuário (coloque-a dentro
+de um bloco try).
 
 Um mágico nunca revela seus segredos, por isso veja o método adivinha número na classe jogo
 para ver se você consegue descobrir como a adivinhação é feita!
 """
+
+
+class SoSimOuNao(Exception):
+    def __str__(self):
+        return 'Você só pode digitar sim ou não, nada mais'
 
 
 class Jogo(object):
@@ -58,20 +64,42 @@ class Jogo(object):
         Método que imprime uma apresentação e explicação rápida de como
         funciona o jogo.
         """
-        pass
+        print('Ola bem-vindo ao jogo de advinhar números')
+        print('Para jogar você deve pensar em um número entre 1 e 63')
+        print('Depois vou lhe mostrar diversos cartões e você deve me dizer')
+        print('se o número que você pensou está dentro desses cartões')
+        print('E por fim, vou adivinhar o número que você pensou')
 
     def recebeEntradaDoUsuário(self):
         """
         Função que recebe a entrada lida com ela de forma adequada
         Devolve True se o usuário digitou sim e False se digitou não
         """
-        pass
+        while True:
+            try:
+                resp = input(
+                    '\nO número está nessa cartela? (s/sim ou n/não)\n').lower()
+
+                if not resp.isalpha():
+                    print('Digite apenas letras!!')
+                elif resp.startswith('s'):
+                    return True
+                elif resp.startswith('n'):
+                    return False
+                else:
+                    raise SoSimOuNao
+
+            except SoSimOuNao:
+                print(SoSimOuNao())
 
     def imprimeNumeroSecreto(self):
         """
         Imprime uma mensagem legal apresentando self.__num
         """
-        pass
+        print('\nDeixa eu adivinhar!')
+        print('Você pensou no número', self.__num)
+        print('Foi não foi?!!')
+        print('HAHAHAHA, eu sou um gênio!')
 
     ############### Métodos já feitos ###############
     def main(self):
