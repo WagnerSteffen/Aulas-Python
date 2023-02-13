@@ -15,19 +15,25 @@ def main():
 def play():
     score = []
     for qst in questions.values():
+        answer_bool = False
         question = qst.keys()
         print(list(question)[0])
         answer = str(input("Type your answer: ")).lower()
-        # print(list(qst.values())[0])
-        if answer in list(qst.values())[0]:
-            score.append(True)
-            print("Correct! \n")
-        elif answer == "exit":
+        if answer == "exit":
             break
+        print(list(qst.values())[0])
+        for i in list(qst.values())[0]:
+            if answer == i:
+                answer_bool = True
+                score.append(True)
+            print(i)
+        if answer_bool:
+            print("Correct! \n")
         else:
             score.append(False)
             print("Wrong! \n")
     return score
+
 if __name__ == "__main__":
     main()
 
