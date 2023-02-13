@@ -9,6 +9,6 @@ print("Pense em um numero de 0 a 100")
 print("Seu numero é divisivel por 2?")
 answer = str(input("Sim ou Não? ")).lower()
 if check(answer):
-
+    pass
 
 # print("Seu numero é divisivel por 3?")
