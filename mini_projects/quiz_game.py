@@ -8,6 +8,7 @@ def main():
         if answer.startswith('y'):
             score = play()
             score = score.count(True)
+            
             print(f"You got {score} right! \n")
         else:
             print("Thanks, see you soon")
@@ -21,12 +22,12 @@ def play():
         answer = str(input("Type your answer: ")).lower()
         if answer == "exit":
             break
-        print(list(qst.values())[0])
+        # print(list(qst.values())[0])
         for i in list(qst.values())[0]:
             if answer == i:
                 answer_bool = True
                 score.append(True)
-            print(i)
+            # print(i)
         if answer_bool:
             print("Correct! \n")
         else:
@@ -36,7 +37,3 @@ def play():
 
 if __name__ == "__main__":
     main()
-
-
-#Pacific always wrong
-#ant work for elephant
