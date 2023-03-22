@@ -48,7 +48,8 @@ Password: {view[0][2]}
         self.__key = key
         connection.mycursor.execute(f"""
                                     INSERT INTO records(login, password, domain, user)
-                                    VALUES("{lock}", "{key}", "{door}", {self.__id})""")
+                                    VALUES("{lock}", "{key}", "{door}", {self.__id})
+                                    ON DUPLICATE KEY UPDATE login = "{lock}", password = "{key}" """)
         connection.mydb.commit()
         print(connection.mycursor.rowcount, "record inserted.")
         
@@ -63,6 +64,8 @@ def main():
     while True:
         option = int(input("1 - Create Profile\n2 - Access account\n0 - Exit\n:"))
         if option == 0:
+            connection.mycursor.close()
+            connection.mydb.close()
             break
         elif option == 1:
             account = profile()
