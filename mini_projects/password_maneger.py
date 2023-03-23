@@ -1,4 +1,12 @@
 import connection
+import os
+import time
+
+def clear_screen():
+    if os.name == 'nt':  # If the OS is Windows
+        os.system('cls')
+    else:  # Otherwise (assume Unix-like)
+        os.system('clear')
 class manager:
     def __init__(self, user, password, encription) -> None:
         self.user = user
@@ -70,20 +78,24 @@ def main():
         elif option == 1:
             account = profile()
             account.create_account()
+            clear_screen()
         elif option == 2:
             account = profile()
             while account.access_account() is False and account.user != "":
+                clear_screen()
                 print("Access denied!")
                 account = profile()
             if account.user == "":
                 break
             elif account.access_account():
+                clear_screen()
                 print("Access granted!")
                 records_options(account)
         else:
             print("Choose between 1, 2 and 3. Only digits!")
     connection.mycursor.close()
     print("See you soon!")
+    time.sleep(1)
 
 def profile():
     login = str(input("Login: "))
@@ -103,18 +115,24 @@ def records_options(user):
     0 - Exit
     : """))
         if record_option == 1:
+            clear_screen()
             user.listit()
         elif record_option == 2:
             domain = str(input("What is the domain of the password?\n:"))
+            clear_screen()
             user.view(domain)
         elif record_option == 3:
             domain = str(input("What is the domain of the password?\n:"))
             login = str(input("What is the login?\n:"))
             password = str(input("What is the the password?\n:"))
             user.create(domain, login, password)
+            time.sleep(1)
+            clear_screen()
         elif record_option == 4:
             domain = str(input("What is the domain of record that you want to remove?\n:"))
             user.remove(domain)
+            time.sleep(1)
+            clear_screen()
         elif record_option == 0:
             break
         else:
