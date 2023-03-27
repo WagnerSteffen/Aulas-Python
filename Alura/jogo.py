@@ -51,14 +51,17 @@ class player():
         self._sp = sp
         self._save = datetime.datetime.now()
         self._enemiesDefeated = 0
-    def con():
-        pass
-    def save():
-        pass
-    def give_up():
-        pass
-    def level_up():
-        pass
+    def level_up(self, attribute):
+        if attribute == 'strength':
+            self._strenght += 5
+        elif attribute == 'defense':    
+            self._defense += 5
+        elif attribute == 'hp':
+            self._hp = 500
+        elif attribute == 'sp':    
+            self._sp = 100
+        else:
+            print("Attribute not supported")
 def main():
     memory_card = dbm.open('saves.db', 'c')
     game = welcome_menu(memory_card)
@@ -99,5 +102,15 @@ def player_menu():
     3 - GIVE UP\n"""
         )
     )
+
+
+def con():
+    pass
+
+def save():
+    pass
+
+def give_up():
+    pass
 if __name__ == '__main__':
     main()
