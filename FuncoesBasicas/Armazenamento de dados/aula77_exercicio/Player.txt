@@ -1,0 +1,19 @@
+Player:
+	Passivos:
+	-LevelUP -> player stats:
+	Ativos:
+	-Atacar -> ataque, dano:
+
+Inimigo:
+	Passivo:
+	-Qtd -> int:
+	Ativo:
+	-Atacar -> ataque, dano:
+
+Jogo:
+	Passivo:
+	-Continuar -> bool:
+	Ativo:
+	-Carregar -> player:
+	-Salvar -> bool:
+	-Desistir -> bool:
