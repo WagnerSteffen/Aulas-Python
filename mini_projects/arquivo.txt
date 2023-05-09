@@ -1,0 +1,5 @@
+Rodando a face: FRONT, sentido: CLOCKWISE 
+Rodando a face: RIGHT, sentido: COUNTERCLOCKWISE 
+Rodando a face: BOTTOM, sentido: COUNTERCLOCKWISE 
+Rodando a face: FRONT, sentido: COUNTERCLOCKWISE 
+Rodando a face: LEFT, sentido: CLOCKWISE 
