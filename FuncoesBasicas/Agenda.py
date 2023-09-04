@@ -6,8 +6,7 @@ while True:
     if not ordem.isalpha():
         print("Digite apenas letras!")
     elif ordem.startswith("a"):
-        entrada = {}
-        entrada["Nome"] = input("Digite o nome da pessoa: ").capitalize()
+        entrada = {"Nome": input("Digite o nome da pessoa: ").capitalize()}
         entrada["Telefone"] = input("Digite o número de telefone: ")
         entrada["Endereço"] = input("Digite o endereço: ")
         entrada["Email"] = input("Digite o email: ")

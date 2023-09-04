@@ -1,6 +1,6 @@
 usuarios = dict()
 
-with open("usuarios.txt", "r") as arquivo:
+with open("./usuarios.txt", "r") as arquivo:
     for linha in arquivo:
         usuario = linha[:15].strip()
         espaco = int(linha[15:].strip())
@@ -20,7 +20,7 @@ n = 1
 for u, e in usuarios.items():
     output = f"{n}".ljust(5)
     output += f"{u}".ljust(15)
-    ocup = ("%.2f" % (e / (1024 ** 2))).rjust(8).replace(".", ",")
+    ocup = ("%.2f" % (e / (1024**2))).rjust(8).replace(".", ",")
     ocup += " MB"
     output += ocup.ljust(21)
 
