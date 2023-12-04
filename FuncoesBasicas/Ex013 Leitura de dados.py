@@ -1,6 +1,6 @@
 usuarios = dict()
 
-with open("./usuarios.txt", "r") as arquivo:
+with open("usuarios.txt", "r") as arquivo:
     for linha in arquivo:
         usuario = linha[:15].strip()
         espaco = int(linha[15:].strip())
