@@ -13,10 +13,18 @@ class SolarSystem:
             'sun': {'radius': 696340.0 * 1e3, 'distanceToSun': 0.0}
         }
 
-
     def resizeSolarSystem(self, newSize):
-        # newSize = float(input("Set the new radius of the sun in meters: "))
+        """
+        Recive a parameter that is the new size of the sun in your solar sistem and returns the planets in scale
+
+        Args:
+            newSize: The size that the sun should be in your model
+
+        Returns: values for the planets of the solar sistem in scale
+
+        """
         Resize = self.solarSystem['sun']['radius'] / newSize
+
         def modifyDict(radius: float):
             print('Adjustin solar system...')
             for key in self.solarSystem:
@@ -28,17 +36,30 @@ class SolarSystem:
                         self.solarSystem[key][value] = self.solarSystem[key][value] / radius
                     else:
                         raise ValueError('Dicionario de dados não esta em conformidade')
+
         modifyDict(Resize)
 
     def show(self):
+        """
+        Print the information about of your model
+
+        Returns: None
+
+        """
         for key in self.solarSystem:
             if self.solarSystem[key]["radius"] >= 1:
                 print(f'\nThe new radius of {key} is {self.solarSystem[key]["radius"]:.5g} meters')
             else:
-                print(f'\nThe new radius of {key} is {self.solarSystem[key]["radius"]*100:.5g} centimeters')
+                print(f'\nThe new radius of {key} is {self.solarSystem[key]["radius"] * 100:.5g} centimeters')
             print(f'The new distance to the Sun of {key} is {self.solarSystem[key]["distanceToSun"]:.2f} meters \n')
 
     def restart(self):
+        """
+        Resets your model to the correct values
+
+        Returns: Solar sistem info in original values
+
+        """
         self.solarSystem = {
             'mercury': {'radius': 2439.7 * 1e3, 'distanceToSun': 57909227.0 * 1e3},
             'venus': {'radius': 6051.8 * 1e3, 'distanceToSun': 108209475.0 * 1e3},
