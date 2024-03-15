@@ -26,7 +26,8 @@ class Mall:
                       'start_date': str,
                       'end_date': str,
                       'owner': str,
-                      'cnpj': int}
+                      'cnpj': int,
+                      'rent': float}
         self.shopping_spaces: dict = {('E' + str(k)): store_hist for k, _ in zip(list(range(self.number_of_stores)), list(range(self.number_of_stores)))}
         return self.shopping_spaces
 
@@ -37,7 +38,7 @@ class Mall:
             A string with the curruent places in the shopping, beeing avalible or not.
 
         """
-        for store,_ in self.shopping_spaces.items():
+        for store, _ in self.shopping_spaces.items():
             print(f'Store: {store}')
             for k, v in self.shopping_spaces[store].items():
                 print(f'{k}: {v}')
@@ -75,32 +76,44 @@ class Mall:
 
         """
         store_info = self.shopping_spaces[store]
-
+        if len(store_info.dalayed_months) > 0:
+            print("It's not possible to leave, there is a debt!")
+            pay_now = input("Do you wish to pay the debt now? \n")
+            if pay_now.startswith('y') | int(pay_now) == 1:
+                self.pay_rent(store)
+        else:
+            self.shopping_spaces[store]['active'] = False
         return ' '
 
-    def pay_rent(self, store: str, month: str) -> list:
+    def pay_rent(self, store: str) -> list:
         """
         Account a payment to the shopping from the store
 
         Args:
             store: Code of the store that is paying the rent
-            month: Numeber of the moth that's beeing paid
 
         Returns:
             A list with the months paid and another list with the debt, if there is one.
         """
-        pass
+        print("This are the month that you own: \n", self.shopping_spaces[store]['delayed_months'])
+
+        confirmation = False
+
+        while not confirmation:
+            what_pay = input("Witch month are you going to pay? ")
+            what_pay = what_pay.split(' ')
+            difference = set(what_pay) - set(self.number_of_stores[store]['delayed_months'])
+
+            if len(difference) > 0:
+                print(f'There is some months that are not in debt: {" ".join(str(i) for i in difference)}')
+            else:
+                print(f"The selected months are: {what_pay}")
+                confirmation = input("It's that correct? \n")
+
+        return self.shopping_spaces[store]['delayed_months']
 
 
-def menu() -> input:
-        """
-        Show a menu to navegate between options
-
-        Returns:
-            Input of options
-
-        """
 
 
-if __name__ == '__main__':
-    menu()
+
+
