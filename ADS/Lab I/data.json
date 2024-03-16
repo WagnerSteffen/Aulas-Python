@@ -1,0 +1,226 @@
+{
+    "E0": {
+        "active": true,
+        "payed_months": [],
+        "to_pay_months": [
+            2
+        ],
+        "type_store": [],
+        "start_date": "2024-03-15",
+        "end_date": "",
+        "owner": "Wagner Steffen",
+        "cnpj": 12312312312312,
+        "rent": 0.0
+    },
+    "E1": {
+        "active": true,
+        "payed_months": [],
+        "to_pay_months": [
+            3
+        ],
+        "type_store": [],
+        "start_date": "2024-03-15",
+        "end_date": "",
+        "owner": "Eduardo Monblac",
+        "cnpj": 99999999999912,
+        "rent": 0.0
+    },
+    "E2": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E3": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E4": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E5": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E6": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E7": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E8": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E9": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E10": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E11": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E12": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E13": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E14": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E15": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E16": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E17": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E18": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    },
+    "E19": {
+        "active": false,
+        "payed_months": [],
+        "to_pay_months": [],
+        "type_store": [],
+        "start_date": "",
+        "end_date": "",
+        "owner": "",
+        "cnpj": 0,
+        "rent": 0.0
+    }
+}
