@@ -16,7 +16,9 @@
         "active": true,
         "payed_months": [],
         "to_pay_months": [
-            3
+            3,
+            4,
+            5
         ],
         "type_store": [],
         "start_date": "2024-03-15",

@@ -62,5 +62,5 @@ def determine_winner(player_choice, computer_choice):
             count += 1
             return print("You win!")
 
-
-main()
+if __name__ == "__main__":
+    main()

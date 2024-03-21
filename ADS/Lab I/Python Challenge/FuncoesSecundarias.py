@@ -8,7 +8,7 @@ def get_cnpj(cnpj: str) -> int:
 
     """
     only_digit: str = cnpj.replace('.', '').replace('/', '').replace("-", "")
-    while only_digit.isdigit() is False & len(only_digit) != 14:
+    while not only_digit.isdigit() & (len(only_digit) == 14):
         if len(only_digit) != 14:
             print('CNPJ precisa ter 14 digitos')
         elif only_digit.isdigit() is False:
@@ -16,7 +16,6 @@ def get_cnpj(cnpj: str) -> int:
         else:
             raise Exception('Erro desconhecido')
         only_digit: str = str(input('Digite o cnpj:\n').replace('.', '').replace('/', '').replace("-", ""))
-
     return int(only_digit)
 
 

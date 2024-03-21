@@ -1,6 +1,9 @@
 import json
+
 with open('quiz_questions.json') as file:
     questions = json.load(file)
+
+
 def main():
     while True:
         print("Hello, do you wanna play a game?")
@@ -8,11 +11,13 @@ def main():
         if answer.startswith('y'):
             score = play()
             score = score.count(True)
-            
+
             print(f"You got {score} right! \n")
         else:
             print("Thanks, see you soon")
             break
+
+
 def play():
     score = []
     for qst in questions.values():
@@ -34,6 +39,7 @@ def play():
             score.append(False)
             print("Wrong! \n")
     return score
+
 
 if __name__ == "__main__":
     main()
