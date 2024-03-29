@@ -1,10 +1,26 @@
-from collections import deque
+class Player:
+    def __init__(self, name: str, age: str):
+        self.name = name
+        while not age.isdigit():
+            print("\nOnly digits are allowed")
+            age = str(input("What is the age of the player: "))
+        self.age = int(age)
 
-lista = [1,2,3,4,5,6]
-de = deque(lista)
-de.rotate(0)
-print(de)
-de.rotate(-3)
-print(de)
-de.rotate(-1)
-print(de)
+    def check_age(self):
+        if self.age >= 18:
+            print(f"{self.name}, you are an adult")
+        elif 18 > self.age >= 13:
+            print(f"{self.name}, you are an adolecent")
+        else:
+            print(f"{self.name}, you are an child")
+
+
+def main():
+    num = int(input("How many players do you want to add: "))
+    for i in range(num):
+        p = Player(str(input("Name: ")), str(input("Age: ")))
+        p.check_age()
+
+
+if __name__ == "__main__":
+    main()

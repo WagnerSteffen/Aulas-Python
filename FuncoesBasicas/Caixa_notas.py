@@ -18,7 +18,7 @@ if 9 < saque < 601:
                                     print("Você recebeu",um,"nota(s) de 1R$")
                                         
                                 
-                    
+
 
 else:
     print("O saque deve Conter o valor entre 10 e 600R$")

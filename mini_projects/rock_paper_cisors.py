@@ -22,8 +22,8 @@ def main():
 def player_choice():
     print("\n")
     for (
-        num,
-        op,
+            num,
+            op,
     ) in enumerate(options):
         print(num, op)
     p_choice = int(input("What do you chose? \n:"))
@@ -61,6 +61,7 @@ def determine_winner(player_choice, computer_choice):
         else:
             count += 1
             return print("You win!")
+
 
 if __name__ == "__main__":
     main()

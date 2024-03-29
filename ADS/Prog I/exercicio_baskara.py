@@ -1,4 +1,14 @@
 def baskara(a: int, b: int, c: int) -> list:
+    """
+    Calcula a formula de baskara para uma dada funcao de segundo grau
+    Args:
+        a: primeiro termo da funcao de segundo grau
+        b: Segundo termo da funcao de segundo grau
+        c: Terceiro Termo da funcao de segundo grau
+
+    Returns: valores de X1 e X2 em uma lista
+
+    """
     x1 = (-b + ((b ** 2) - (4 * a * c)) ** (1 / 2)) / (2 * a)
     x2 = (-b - ((b ** 2) - (4 * a * c)) ** (1 / 2)) / (2 * a)
     return [x1, x2]
